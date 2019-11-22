@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		ACF731E123881BCD000B0054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF731E023881BCD000B0054 /* AppDelegate.swift */; };
 		ACF731E323881BCD000B0054 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF731E223881BCD000B0054 /* SceneDelegate.swift */; };
-		ACF731E523881BCD000B0054 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF731E423881BCD000B0054 /* ViewController.swift */; };
 		ACF731E823881BCD000B0054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF731E623881BCD000B0054 /* Main.storyboard */; };
 		ACF731EB23881BCD000B0054 /* SaveTasksInCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACF731E923881BCD000B0054 /* SaveTasksInCoreData.xcdatamodeld */; };
 		ACF731ED23881BD9000B0054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF731EC23881BD9000B0054 /* Assets.xcassets */; };
 		ACF731F023881BD9000B0054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF731EE23881BD9000B0054 /* LaunchScreen.storyboard */; };
+		ACF731FB23881C66000B0054 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF731FA23881C66000B0054 /* TasksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ACF731DD23881BCD000B0054 /* SaveTasksInCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveTasksInCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF731E023881BCD000B0054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF731E223881BCD000B0054 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACF731E423881BCD000B0054 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACF731E723881BCD000B0054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACF731EA23881BCD000B0054 /* SaveTasksInCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaveTasksInCoreData.xcdatamodel; sourceTree = "<group>"; };
 		ACF731EC23881BD9000B0054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACF731EF23881BD9000B0054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF731F123881BD9000B0054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF731FA23881C66000B0054 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,40 @@
 		ACF731DF23881BCD000B0054 /* SaveTasksInCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				ACF731E023881BCD000B0054 /* AppDelegate.swift */,
-				ACF731E223881BCD000B0054 /* SceneDelegate.swift */,
-				ACF731E423881BCD000B0054 /* ViewController.swift */,
-				ACF731E623881BCD000B0054 /* Main.storyboard */,
+				ACF731F723881BE7000B0054 /* Delegates */,
+				ACF731F923881C38000B0054 /* Controllers */,
+				ACF731F823881BFE000B0054 /* Views */,
 				ACF731EC23881BD9000B0054 /* Assets.xcassets */,
-				ACF731EE23881BD9000B0054 /* LaunchScreen.storyboard */,
 				ACF731F123881BD9000B0054 /* Info.plist */,
 				ACF731E923881BCD000B0054 /* SaveTasksInCoreData.xcdatamodeld */,
 			);
 			path = SaveTasksInCoreData;
+			sourceTree = "<group>";
+		};
+		ACF731F723881BE7000B0054 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				ACF731E023881BCD000B0054 /* AppDelegate.swift */,
+				ACF731E223881BCD000B0054 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		ACF731F823881BFE000B0054 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACF731E623881BCD000B0054 /* Main.storyboard */,
+				ACF731EE23881BD9000B0054 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACF731F923881C38000B0054 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACF731FA23881C66000B0054 /* TasksTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF731E523881BCD000B0054 /* ViewController.swift in Sources */,
 				ACF731E123881BCD000B0054 /* AppDelegate.swift in Sources */,
 				ACF731EB23881BCD000B0054 /* SaveTasksInCoreData.xcdatamodeld in Sources */,
+				ACF731FB23881C66000B0054 /* TasksTableViewController.swift in Sources */,
 				ACF731E323881BCD000B0054 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.SaveTasksInCoreData";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.SaveTasksInCoreData";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
